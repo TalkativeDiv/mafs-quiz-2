@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2 Player Word Guess</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url('https://rsms.me/inter/inter.css');
+      * {
+        font-family: 'Inter var', 'Inter', system-ui, -apple-system,
+          BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+          'Open Sans', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+        transition: 0.3s all ease;
+      }
+    </style>
+    <script src="scripts/wordguess.js" async defer></script>
+  </head>
+  <body   class="grid min-h-screen place-items-center bg-blue-700">
+   
+    <div class="w-full max-w-xs p-5 m-auto bg-blue-200 border-2 rounded-xl shadow-blue-400">
+      <div class="flex flex-col justify-center items-center">
+        <h2 class="text-2xl font-bold text-blue-500">Guess The Word!</h2>
+        <div class="flex gap-4 font-bold text-blue-500">
+           <h3 id="player1_name" class="text-xl"></h4>
+    <h3 id="player2_name" class="text-xl"></h4>
+        </div>
+        <h3 id="player_question" class="font-bold text-lg text-blue-500"></h3>
+        <h3 id="player_answer" class="font-bold text-lg text-blue-500"></h3>
+        <br>
+        <div class="bg-blue-300 border-2 border-slate-300 rounded-xl p-4 invisible" id="output" ></div>
+        <br /><br />
+       <form >
+         <div>
+          <label for="#number1" class="text-left text-blue-500">Number 1</label>
+          <input
+            type="number"
+            id="number1"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 focus:outline-none"
+            placeholder="Number 1"
+            required
+          />
+        </div>
+        <br />
+        <div>
+          <label for="#number2" class="text-left text-blue-500">Number 2</label>
+          <input
+            type="number"
+            id="number2"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 focus:outline-none"
+            placeholder="Number 2"
+            required
+          />
+        </div>
+        <br />
+        <br />
+
+        <button
+          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+        
+          type="submit"
+        >
+          Send
+        </button>
+       </form>
+      </div>
+    </div>
+  </body>
+</html>
